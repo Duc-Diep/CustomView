@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ExCustomView</string>
+    <string name="enter_password">Nhập mật khẩu</string>
+    <string name="incorrect_password">Mật khẩu không chính xác</string>
+    <string name="create_password">Tạo mật khẩu mới</string>
+    <string name="request_password">Mật khẩu yêu cầu ít nhất 3 đường thẳng</string>
+    <string name="create_success">Tạo mật khẩu thành công</string>
+    <string name="enter_success">Mật khẩu chính xác rồi nè</string>
 </resources>

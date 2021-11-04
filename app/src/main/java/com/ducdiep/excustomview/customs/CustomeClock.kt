@@ -20,8 +20,6 @@ class CustomeClock : View {
     private var mHeight = 0
     private var mWidth = 0
 
-
-
     //hours
     private val mClockHours = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
 
@@ -65,7 +63,7 @@ class CustomeClock : View {
             mPadding = mNumeralSpacing + 50
             var minAttr = mHeight.coerceAtMost(mWidth)
             mRadius = minAttr / 2 - mPadding
-            //setup chieu cao kim dong ho
+            //setup width clock hand
             mHandTruncation = minAttr / 20
             mHourHandTruncation = minAttr / 17
             if (calendar==null){
@@ -99,17 +97,17 @@ class CustomeClock : View {
     override fun onDraw(canvas: Canvas?) {
         initAttr()
         canvas?.drawColor(Color.BLUE)
-        //ve hinh tron
+        //draw circle bound
         mPaint?.reset()
         mPaint?.color = Color.WHITE
         mPaint?.style = Paint.Style.STROKE
         mPaint?.strokeWidth = 4f
         mPaint?.isAntiAlias = true
         canvas?.drawCircle((mWidth / 2).toFloat(), (mHeight / 2).toFloat(), (mRadius + mPadding - 10).toFloat(), mPaint!!)
-        //ve tam dong ho
+        //circle center
         mPaint?.style = Paint.Style.FILL
         canvas?.drawCircle((mWidth / 2).toFloat(), (mHeight / 2).toFloat(), 10f, mPaint!!)
-        //ve so hien thi gio
+        //draw number
         val fontSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 14f, resources.displayMetrics).toInt()
         mPaint!!.textSize = fontSize.toFloat()
 
